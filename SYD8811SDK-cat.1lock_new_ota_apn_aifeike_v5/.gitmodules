@@ -1,0 +1,3 @@
+[submodule "SydtekInc_inform"]
+	path = SydtekInc_inform
+	url = git@gitee.com:SydtekInc/SydtekInc_inform.git

@@ -1,0 +1,9 @@
+Firmware固件:   FW_BLE_LOCK_SYD8811_X_X_X.bin   
+BLE服务文件：SYD_ble_service_Flash.txt
+4K固件：SYD8811_4ksetting_9pf_0x34_LPO32K_8000PPM_ECOC_20220216.bin
+
+
+备注：
+     1、如果是已经使用过的芯片，不需要烧4k固件，如果烧了4k 蓝牙MAC需要手动更改
+     2、使用过的芯片更新固件，只需更新 BLE服务文件,Firmware固件.
+     3、没用过的芯片必须烧4k，然后更改MAC地址。

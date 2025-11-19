@@ -1,0 +1,28 @@
+#ifndef _DEBUG_H_
+#define _DEBUG_H_
+
+#include "ARMCM0.h"
+#include "config.h"
+#include "DebugLog.h"
+
+//#define _DEBUG_
+
+#ifdef _DEBUG_
+	#define DBGPRINTF_TIMER(s)	 				dbg_printf s
+	#define DBGPRINTF(...)	 						dbg_printf( __VA_ARGS__)
+	#define DBGHEXDUMP(title,buf,sz)	 	dbg_hexdump(title,buf,sz)
+
+	extern void dbg_init(void);
+	extern void dbg_printf(char *format,...);
+	extern void dbg_hexdump(char *title, uint8_t *buf, uint16_t sz);
+#elif (defined _SYD_RTT_DEBUG_)
+
+#else
+	#define dbg_printf(...)
+	#define dbg_hexdump(title,buf,sz)
+	
+	#define DBGPRINTF(...)	 		
+	#define DBGHEXDUMP(title,buf,sz)
+#endif
+
+#endif
